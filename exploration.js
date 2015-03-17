@@ -42,7 +42,7 @@ document.write("</span>")
 
 document.writeln("----------------------------------------------------------------------------------");
 
-document.write("<h1>Prototype Example</h1>");
+document.write("<h1>Prototype & Open Class Example</h1>");
 document.write("<h4>Here is an example of a prototype:</h4>")
 document.writeln("function Person(name, age, hometown){\n\tthis.name = name;\n\tthis.age = age;\n\tthis.hometown = hometown;\n}");
 function Person(name, age, hometown){
@@ -58,6 +58,17 @@ document.write("<h4>Now as you would probably expect, you can access the objects
 document.writeln("me.name prints: <span id='generated'>" + me.name + "</span>");
 document.writeln("me.age prints: <span id='generated'>" + me.age + "</span>");
 document.writeln("me.hometown prints: <span id='generated'>" + me.hometown + "</span>");
+
+
+//open classes???
+me.boom = "slam";
+document.writeln(me.boom);
+Person.prototype.nationality = "American";
+document.writeln(me.nationality);
+var jin = new Person("owief", 234, "South Korea");
+document.writeln(jin.nationality);
+me.nationality = "Canadian";
+document.writeln(me.nationality);
 
 document.writeln("----------------------------------------------------------------------------------");
 
