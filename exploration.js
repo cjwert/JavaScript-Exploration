@@ -60,15 +60,13 @@ document.writeln("me.age prints: <span id='generated'>" + me.age + "</span>");
 document.writeln("me.hometown prints: <span id='generated'>" + me.hometown + "</span>");
 
 
-//open classes???
-me.boom = "slam";
-document.writeln(me.boom);
+document.write("<h4>JavaScript also has open classes meaning we can extend the prototype for the Person class we just wrote above.\nHere we will add a nationality property to the Person class:</h4>")
+document.writeln("Person.prototype.nationality = \"American\";")
 Person.prototype.nationality = "American";
-document.writeln(me.nationality);
-var jin = new Person("owief", 234, "South Korea");
-document.writeln(jin.nationality);
-me.nationality = "Canadian";
-document.writeln(me.nationality);
+document.write("<h4>Now to check if it has worked! We will create a new Person object and check it's nationality.</h4>")
+var christian = new Person("Christian", 234, "Golden, CO");
+document.writeln("var christian = new Person(\"Christian\", 234, \"Golden, CO\")");
+document.writeln("christian.nationality returns: <span id=\"generated\">" + christian.nationality + "</span>");
 
 document.writeln("----------------------------------------------------------------------------------");
 
@@ -86,7 +84,3 @@ var mult10 = mult(10);
 document.write("<h4>Results of calling these functions:</h4>")
 document.writeln("Calling \"mult5(2)\" returns: <span id='generated'>" + mult5(2) + "</span>");
 document.writeln("Calling \"mult10(2)\" returns: <span id='generated'>" + mult10(2) + "</span>");
-
-document.writeln("----------------------------------------------------------------------------------");
-
-document.write("<h1>Inheritance Example</h1>");
